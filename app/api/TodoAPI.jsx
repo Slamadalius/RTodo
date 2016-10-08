@@ -35,7 +35,7 @@ module.exports = {
     filterTodos.sort((a, b) => {
       return rankings[b.completed] - rankings[a.completed]
     });
-    
+
     //filter by searchText
     filterTodos = filterTodos.filter((todo) =>{
       var text = todo.text.toLowerCase();
