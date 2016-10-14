@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import * as Redux from 'react-redux';
 
 // var TodoList = require('TodoList');
@@ -9,18 +9,18 @@ import AddTodo from 'AddTodo';
 import TodoSearch from 'TodoSearch';
 import * as actions from 'actions';
 
-export var TodoApp = React.createClass({
+export class TodoApp extends Component {
     onLogout(e) {
         var {dispatch} = this.props;
         e.preventDefault();
 
         dispatch(actions.startLogout());
-    },
+    }
     render() {
         return (
             <div>
               <div className="page-actions">
-                  <a href='#' onClick={this.onLogout}>Logout</a>
+                  <a href='#' onClick={this.onLogout.bind(this)}>Logout</a>
               </div>
                 <h1 className="page-title">RTodo</h1>
                 <div className="row">
@@ -35,6 +35,6 @@ export var TodoApp = React.createClass({
             </div>
         )
     }
-});
+};
 
 export default Redux.connect()(TodoApp);

@@ -68,16 +68,16 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
-        exclude: /(node_module|bower_components)/
+        exclude: /(node_modules|bower_components)/
       },
-      {
-        test: /\.png$/,
-        loader: "url-loader?mimetype=image/png"
-      },
-      {
-      test: /\.jpg$/,
-      loader: "url-loader?mimetype=image/jpg"
-      }
+      // {
+      //   test: /\.png$/,
+      //   loader: "url-loader?mimetype=image/png"
+      // },
+      // {
+      // test: /\.jpg$/,
+      // loader: "url-loader?mimetype=image/jpg"
+      // }
     ]
   },
   sassLoader: {
@@ -85,5 +85,5 @@ module.exports = {
       path.resolve(__dirname, './node_modules/foundation-sites/scss')
     ]
   },
-  devtool: process.env.NODE_ENV === 'production' ? undefined : 'inline-source-map'
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-eval-module-source-map'
 };
