@@ -1,1 +1,2 @@
-Boiler Plate
+Todo app created with React.js
+
